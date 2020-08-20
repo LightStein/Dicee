@@ -12,13 +12,11 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    scheme: ''
-    sdk: 'iphoneos'
     configuration: 'Release'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    sdk: 'iphoneos'
     packageApp: true
     archivePath: 'output/$(SDK)/$(Configuration)'
+    signingOption: 'default'
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11 Pro Max'
 
