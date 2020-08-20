@@ -17,3 +17,13 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    packageApp: true
+    archivePath: 'output/$(SDK)/$(Configuration)'
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 11 Pro Max'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'output/$(SDK)/$(Configuration)'
+    ArtifactName: 'Dicee Artifacts'
+    publishLocation: 'Container'
