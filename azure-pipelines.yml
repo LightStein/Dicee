@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: 'macos-latest'
+pool: 'Default'
 
 steps:
 - task: Xcode@5
