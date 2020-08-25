@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: 'Default'
+pool: 'macOS-latest'
 
 steps:
 - task: Xcode@5
@@ -18,7 +18,7 @@ steps:
     archivePath: 'output/$(SDK)/$(Configuration)'
     signingOption: 'default'
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone 11 Pro Max'
+    destinationSimulators: 'iPhone 11 Pro Max,OS=13.6'
 
 - task: PublishBuildArtifacts@1
   inputs:
