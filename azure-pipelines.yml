@@ -12,7 +12,7 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    configuration: 'Release'
+    configuration: 'Debug'
     sdk: 'iphonesimulator'
     packageApp: true
     archivePath: '/Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts'
