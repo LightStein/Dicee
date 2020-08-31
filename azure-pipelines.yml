@@ -24,12 +24,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      ls /Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifact
+      ls /Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts
       
       # zip x.zip /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/BMB-Debug.app
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '/Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifact'
+    PathtoPublish: '/Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts'
     ArtifactName: 'Dicee Artifacts'
     publishLocation: 'Container'
