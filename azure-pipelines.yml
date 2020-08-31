@@ -15,7 +15,7 @@ steps:
     configuration: 'Release'
     sdk: 'iphonesimulator'
     packageApp: true
-    archivePath: 'output/$(SDK)/$(Configuration)'
+    archivePath: '/Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts'
     signingOption: 'default'
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11 Pro Max,OS=13.6'
@@ -24,12 +24,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      cd /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator
+      ls /Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifact
       
-      zip x.zip /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/BMB-Debug.app
+      # zip x.zip /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/BMB-Debug.app
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '/Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/x.zip'
+    PathtoPublish: '/Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifact'
     ArtifactName: 'Dicee Artifacts'
     publishLocation: 'Container'
