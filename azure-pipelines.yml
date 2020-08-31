@@ -30,6 +30,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '/Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator'
+    PathtoPublish: '/Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/x.zip'
     ArtifactName: 'Dicee Artifacts'
     publishLocation: 'Container'
