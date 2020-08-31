@@ -13,7 +13,7 @@ steps:
   inputs:
     actions: 'build'
     configuration: 'Release'
-    sdk: 'iphoneos'
+    sdk: 'iphonesimulator'
     packageApp: true
     archivePath: 'output/$(SDK)/$(Configuration)'
     signingOption: 'default'
