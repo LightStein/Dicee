@@ -25,6 +25,7 @@ steps:
     targetType: 'inline'
     script: |
       cp -r /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/Dicee-*/Build/Products/Debug-iphonesimulator/Dicee.app /Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts
+      cd /Users/anrigiorganashvili/Desktop/DevOps/Azure_Agent/Artifacts
       zip -r x.zip Dicee.app
       
       # zip x.zip /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/BMB-Debug.app
