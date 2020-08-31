@@ -20,8 +20,16 @@ steps:
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11 Pro Max,OS=13.6'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      cd /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator
+      
+      zip x.zip /Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator/BMB-Debug.app
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'output/$(SDK)/$(Configuration)'
+    PathtoPublish: '/Users/anrigiorganashvili/Library/Developer/Xcode/DerivedData/BMB-iOS-*/Build/Products/Debug-iphonesimulator'
     ArtifactName: 'Dicee Artifacts'
     publishLocation: 'Container'
